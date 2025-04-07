@@ -1,89 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recetario Digital</title>
-    <!-- CSS de Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetario Digital</title>
+  <!-- Fuente de Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header class="bg-danger text-white py-3">
-        <div class="container">
-            <h1>Recetario Digital</h1>
-            <nav class="mt-2">
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#recetas">Recetas</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contacto">Sobre mí</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="site-header">
+    <div class="container">
+      <h1>Recetario Digital</h1>
+      <nav class="mt-2">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#recetas">Recetas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Sobre mí</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="container my-4">
-        <section id="bienvenida" class="mb-5">
-            <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-                <div class="col-md-6 px-0">
-                    <h2 class="display-4">Bienvenido a mi Recetario Digital</h2>
-                    <p class="lead my-3">Encuentra mis recetas favoritas y tips de cocina.</p>
-                </div>
+  <main class="container my-4">
+    <section id="bienvenida" class="mb-5">
+      <div class="intro-box">
+        <h2 class="display-4">Bienvenido a mi Recetario Digital</h2>
+        <p class="lead">Encuentra mis recetas favoritas y tips de cocina.</p>
+      </div>
+    </section>
+
+    <section id="recetas" class="mb-5">
+      <h2>Recetas</h2>
+      <div class="row" id="recetasContainer">
+        <!-- Las tarjetas se generarán dinámicamente o se pueden dejar aquí -->
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm receta-card">
+            <img src="img/ejemplo.jpg" class="card-img-top" alt="Imagen de receta">
+            <div class="card-body">
+              <h3 class="card-title">Receta Ejemplo</h3>
+              <p class="card-text">Una descripción breve de la receta.</p>
+              <a href="#" class="btn btn-primary">Ver detalle</a>
             </div>
-        </section>
-
-        <section id="recetas" class="mb-5">
-            <h2>Recetas</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <div class="card-body">
-                            <h3 class="card-title">Receta Ejemplo</h3>
-                            <p class="card-text">Descripción breve de la receta.</p>
-                            <a href="#" class="btn btn-primary">Ver detalle</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Puedes duplicar este bloque para más recetas -->
-            </div>
-        </section>
-
-        <!-- Sección para formulario de comentarios (más adelante) -->
-        <section id="contacto" class="mb-5">
-            <h2>Sobre mí / Contacto</h2>
-            <p>Deja tu comentario o sugerencia de receta:</p>
-            <form id="contactForm" class="row g-3">
-                <div class="col-md-6">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="email" class="form-label">Correo</label>
-                    <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
-                </div>
-                <div class="col-12">
-                    <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" rows="3" required></textarea>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-success">Enviar</button>
-                </div>
-            </form>
-        </section>
-    </main>
-
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p>&copy; 2025 Recetario Digital</p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- JS de Bootstrap y dependencias (Popper.js) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <section id="contacto" class="mb-5">
+      <h2>Sobre mí / Contacto</h2>
+      <p>Deja tu comentario o sugerencia de receta:</p>
+      <form id="contactForm" class="row g-3">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Correo</label>
+          <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+        </div>
+        <div class="col-12">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-success">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container text-center">
+      <p>&copy; 2025 Recetario Digital</p>
+    </div>
+  </footer>
+
+  <!-- JS de Bootstrap y dependencias -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
-
 </html>

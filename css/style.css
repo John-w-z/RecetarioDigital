@@ -1,51 +1,108 @@
-/* Estilos generales */
+/* Fuente principal */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    background: #fdfdfd;
+    color: #333;
 }
 
-header {
-    background: #ff6f61;
-    padding: 1rem;
+/* Encabezado personalizado */
+.site-header {
+    background: linear-gradient(135deg, #ff6f61, #ff9671);
+    padding: 1rem 0;
+    text-align: center;
     color: #fff;
+    position: relative;
 }
 
-header h1 {
+/* Animación de entrada para el encabezado */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.site-header h1 {
     margin: 0;
+    animation: fadeInDown 1s ease-out;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
+/* Estilos para el menú de navegación */
+.nav-link {
+    transition: color 0.3s;
 }
 
-nav a {
+.nav-link:hover {
+    color: #ffdede;
+}
+
+/* Caja de bienvenida con fondo y sombra */
+.intro-box {
+    background: url('../img/fondo-recetas.jpg') no-repeat center center/cover;
+    padding: 2rem;
+    border-radius: 10px;
     color: #fff;
-    text-decoration: none;
-}
-
-main {
-    padding: 1rem;
-}
-
-section {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
 }
 
-.receta {
-    background: #fff;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
+/* Efecto hover para las tarjetas de recetas */
+.receta-card {
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-footer {
-    text-align: center;
-    padding: 1rem;
+.receta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Formularios: ajusta el botón y los inputs */
+form input,
+form textarea {
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+}
+
+.btn-success {
+    background: #ff6f61;
+    border-color: #ff6f61;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.btn-success:hover {
+    background: #e85e57;
+    border-color: #e85e57;
+}
+
+/* Pie de página */
+.site-footer {
     background: #333;
+    padding: 1rem 0;
     color: #fff;
+}
+
+/* Animación para las secciones */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
